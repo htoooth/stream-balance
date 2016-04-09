@@ -17,6 +17,6 @@ var handle1 = though(stream);
 var handle2 = though(stream);
 var handle3 = though(stream);
 
-fromArray(stringInt).pipe(balance([handle1,handle2,handle3])).pipe(process.stdout);
+fromArray(stringInt).pipe(balance(handle1,handle2,handle3)).pipe(process.stdout);
 
 ```

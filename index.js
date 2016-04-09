@@ -16,10 +16,11 @@ Pool.prototype = {
   }
 }
 
-function balance(handleStreams, options) {
-  var pool = new Pool(handleStreams);
+function balance() {
+  var streams = [].slice.call(arguments);
+  var pool = new Pool(streams);
 
-  return through(options, function(chunk, _, cb) {
+  return through.obj(function(chunk, _, cb) {
     var idle = pool.gain();
     if (typeof idle === "undefined") {
       this.unshift(chunk);
