@@ -14,5 +14,13 @@
   "license": "MIT",
   "dependencies": {
     "through2": "^2.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htoooth/stream-balance.git"
+  },
+  "bugs": {
+    "url": "https://github.com/htoooth/stream-balance/issues"
+  },
+  "homepage": "https://github.com/htoooth/stream-balance#readme"
 }
