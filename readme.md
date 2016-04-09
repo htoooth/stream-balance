@@ -7,8 +7,8 @@ var fromArray = require("stream-from-array");
 
 var stream = function(chunk, _, cb){
   setTimeout(function(){
-    cb(null,parseInt(chunk));
-  }, parseInt(Math.random()*5000 ,10));
+    cb(null, parseInt(chunk));
+  }, parseInt(Math.random()*5000));
 };
 
 var stringInt = ["1","2","3","4","5","6","7","9","10"];
