@@ -1,6 +1,6 @@
 {
   "name": "stream-balance",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "stream balance",
   "main": "index.js",
   "scripts": {
