@@ -1,9 +1,13 @@
 # stream-balance
+This library contains `balance1` and `balance2`.
 
 ```js
+
 var fromArray = require("stream-from-array");
 var through = require("through2");
-var balance = require("./");
+
+var balance1 = require("./").balance1;
+var balance2 = require("./").balance2;
 
 var stream1 = function(chunk, _, cb) {
   setTimeout(function() {
