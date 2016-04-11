@@ -18,7 +18,7 @@
     "through2": "^2.0.1"
   },
   "devDependencies": {
-    "stream-from-array": "^0.1.0",
+    "stream-from-array": "^0.1.0"
   },
   "repository": {
     "type": "git",
