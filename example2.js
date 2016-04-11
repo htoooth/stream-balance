@@ -1,6 +1,6 @@
 var fromArray = require("stream-from-array");
 var through = require("through2");
-var balance = require("./");
+var balance = require("./balance2");
 
 var stream1 = function(chunk, _, cb) {
   setTimeout(function() {
@@ -37,4 +37,14 @@ var handle3 = through(stream4);
 
 num = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-fromArray(num).pipe(balance([handle, handle1, handle2, handle3])).pipe(process.stdout);
+var read = fromArray(num);
+var bala = balance([handle, handle1, handle2, handle3]);
+
+bala.on("data", function() {
+  console.log("balance");
+});
+
+read.pipe(bala).pipe(through.obj(function(chunk, _, cb) {
+  console.log("result:" + chunk);
+  cb();
+}));
